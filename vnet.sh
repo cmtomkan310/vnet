@@ -137,7 +137,7 @@ archAffix() {
 downloadVNet() {
   rm -rf /tmp/vnet
   mkdir -p /tmp/vnet
-  DOWNLOAD_LINK="https://github.com/ProxyPanel/VNet-SSR/releases/download/v2.1.0/vnet-linux-64.zip"
+  DOWNLOAD_LINK="https://github.com/ProxyPanel/VNet-SSR/releases/download/${NEW_VER}/vnet-linux-64.zip"
   colorEcho ${BLUE} "Downloading vnet: ${DOWNLOAD_LINK}"
   curl ${PROXY} -L -H "Cache-Control: no-cache" -o ${ZIPFILE} ${DOWNLOAD_LINK}
   if [ $? != 0 ]; then
